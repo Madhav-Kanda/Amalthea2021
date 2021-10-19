@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="../css/events.css">
+
+<header class="bg-transparent w-full" style="height: 10vh; position: absolute;"></header>
+
+<main class="w-full">
+	<section class="hero">
+		<div class="relative top-28 pl-8">
+			<div class="text-9xl text-white">Events</div>
+			<div class="sub-title text-4xl text-gray-500 pt-1">@AMALTHEA 21</div>
+		</div>
+		<div class="collage relative mt-5 mr-8">
+			<img src="../images/events_collage.png" alt="events_collage" class="object-contain">
+		</div>
+	</section>
+
+	<section>
+		<div class="magic-wall w-4/5 flex m-auto min-h-0">
+			<ul class="flex flex-wrap justify-center">
+				<% events.forEach(elem => { %>
+					<li class="h-60 w-72 cursor-pointer"><img src=<%- elem.image %> alt="b2" class="object-cover h-full"></li>
+				<% }) %>
+			</ul>
+		</div>
+
+		<% events.forEach(elem => { %>
+			<div class="popup justify-center items-center fixed top-0 h-screen w-full bg-gray-700 bg-opacity-60 shadow-2xl hidden overflow-x-hidden">
+				<div class="pop-cont rounded-3xl p-8 overflow-y-scroll relative" style="background-color: #121824;">
+					<div class="pop-title text-3xl w-full text-center font-semibold font-serif text-white"><%- elem.name %></div>
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-lg absolute right-0 top-0 h-6 w-6 m-4 cursor-pointer" viewBox="0 0 16 16">
+						<path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+					</svg>
+					<div class="info">
+						<div class="about p-4 rounded-2xl mt-4 shadow-lg">
+							<div class="title text-2xl font-semibold">About</div>
+							<div class="content"><%- elem.about %></div>
+						</div>
+						<div class="struct p-4 rounded-2xl mt-4 shadow-lg">
+							<div class="title text-2xl font-semibold">Event Structure</div>
+							<div class="content">
+								<% elem.eventstruct.forEach(element => { %>
+									<ul class="list-disc list-inside">
+										<li><%- element[0] %> </li>
+										<ul class="list-disc list-inside">
+											<% element[1].forEach(e => { %>
+												<li><%- e %></li>
+											<% }) %>
+										</ul>
+									</ul>
+								<% }) %>
+							</div>
+						</div>
+						<div class="prizes p-4 rounded-2xl mt-4 shadow-lg">
+							<div class="title text-2xl font-semibold">Prizes</div>
+							<div class="content"><%- elem.prizes %></div>
+						</div>
+						<div class="rules p-4 rounded-2xl mt-4 shadow-lg">
+							<div class="title text-2xl font-semibold">Rules</div>
+							<div class="content"><%- elem.rules %></div>
+						</div>
+						<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="blob1">
+							<path fill="#246BBD" d="M30.1,18C17.5,39.1,-28.9,41.3,-39.5,21.2C-50.2,1.2,-25.1,-41,-1.9,-42.1C21.3,-43.2,42.6,-3.2,30.1,18Z" transform="translate(100 100)" />
+						</svg>
+						<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="blob2">
+							<path fill="#246BBD" d="M36.2,-20.6C40,0.1,31.6,16,16.2,28.7C0.8,41.4,-21.5,50.9,-33.2,43C-44.9,35.1,-46,9.9,-38.7,-15.6C-31.4,-41.1,-15.7,-66.9,0.2,-66.9C16.2,-67,32.3,-41.4,36.2,-20.6Z" transform="translate(100 100)" />	
+						</svg>
+					</div>
+				</div>
+			</div>
+		<% }) %>
+		<!-- <linearGradient spreadMethod="pad" id="gradient1" x1="0%" y1="70%" x2="70%" y2="0%">
+			<stop offset="0" style="stop-color:rgb(255, 0, 119);stop-opacity:1;" />
+			<stop offset="22%" style="stop-color:rgb(255, 0, 119);stop-opacity:1;" />
+			<stop offset="100%" style="stop-color:rgb(167, 0, 254);stop-opacity:1;" />
+		</linearGradient> -->
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+	<script src="./js/events.js"></script>
+
+</main>

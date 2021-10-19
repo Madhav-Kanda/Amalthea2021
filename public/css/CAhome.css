@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100&family=Sora:wght@100&display=swap');
+
+body {
+	overflow-x: hidden;
+	background: #152642;
+	/* font-family: 'Montserrat', sans-serif; */
+}
+.hero {
+	background: url("../images/caback.jpeg") no-repeat center center/cover;
+	height: 95vh;
+	overflow-x: hidden;
+	display: flex;
+	font-family: 'Poppins', sans-serif;
+}
+.contact-card:hover{
+	background: #2C2C2C;
+}
+.para-head{
+	font-family: 'Montserrat', sans-serif;
+}
+.left-circle{
+	background: orange;
+	left: -6%;
+	top: -6%;
+	z-index: -1;
+}
+.ca-card{
+	background: #274169;
+}
+.right-circle{
+	background: orange;
+	right: -6%;
+	bottom: -6%;
+	z-index: -1;
+}
+#back1{
+	position: absolute;
+	top: 100vh;
+	right: 0;
+	z-index: -1;
+}
+#back2{
+	position: absolute;
+	top: 200vh;
+	transform: scaleX(-1);
+	left: 0;
+	z-index: -1;
+}
+#back3{
+	position: absolute;
+	top: 300vh;
+	right: 0;
+	z-index: -1;
+}
