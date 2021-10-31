@@ -3,12 +3,11 @@ const express = require("express");
 const path = require("path");
 const expressLayouts = require("express-ejs-layouts");
 const ejsMate = require('ejs-mate');
-const events = require("./seeds/event");
-const contact = require("./seeds/about");
+// const pastevents = require("./seeds/event");
+const contact = require("./seeds/contact");
 const webinar = require("./seeds/webinars");
 const sponsors = require("./seeds/sponsors");
-const webinars = require('./seeds/webinars');
-
+const events = require("./seeds/evntdata")
 
 const app = express();
 const PORT = 80;
@@ -33,35 +32,39 @@ app.get('/', (req, res) => {
 	res.status(200).render("home", { events: events, webinar: webinar });
 });
 
-// Events Page
+//Events Page
 app.get('/events', (req, res) => {
-	res.status(200).render("events", { events: events });
+	res.status(200).render("liveevents", { events: events });
 });
 
+// // Webinars Page
+// app.get('/webinars', (req, res) => {
+// 	res.status(200).render("StayTuned");
+// });
 
-// Tech Expo Page
-app.get('/techexpo', (req, res) => {
-	res.status(200).render("StayTuned");
-});
+// // Tech Expo Page
+// app.get('/techexpo', (req, res) => {
+// 	res.status(200).render("StayTuned");
+// });
 
 // Sponsors Page
 app.get('/sponsors', (req, res) => {
 	res.status(200).render("sponsors", { sponsors1: sponsors[0], sponsors2: sponsors[1] });
 });
 
-// Symposium Page
-app.get('/webinars', (req, res) => {
-	res.status(200).render("Webinar", { webinars1: webinars[0], webinars2: webinar[1] });
-});
+// // Symposium Page
+// app.get('/symposium', (req, res) => {
+// 	res.status(200).render("StayTuned");
+// });
 
-// Past Site Page
-app.get('/pastsite', (req, res) => {
-	res.status(200).render("StayTuned");
-});
+// // Past Site Page
+// app.get('/pastsite', (req, res) => {
+// 	res.status(200).render("StayTuned");
+// });
 
 // Contact Page
 app.get('/contact', (req, res) => {
-	res.status(200).render("StayTuned");
+	res.status(200).render("team", {contact: contact});
 });
 
 
@@ -78,7 +81,10 @@ app.get('/CAregister', (req, res) => {
 	res.status(200).render("CAform");
 });
 
-
+// //Live Events
+// app.get('/events', (req, res)=>{
+//     res.render('liveevents', {lvevents: lvevents});
+// })
 
 app.listen((process.env.PORT || PORT), () => {
 	console.log(`The application started successfully on port ${PORT}`);
