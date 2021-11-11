@@ -88,6 +88,10 @@ app.get('/CAportal', (req, res) => {
 app.get('/CAregister', (req, res) => {
 	res.status(200).render("CAform");
 });
+//Webinars
+app.get('/webinars', (req, res) => {
+	res.status(200).render("Webinar",{webinars1:webinar[0]});
+});
 
 // //Live Events
 // app.get('/events', (req, res)=>{

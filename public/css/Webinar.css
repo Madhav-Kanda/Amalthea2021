@@ -23,6 +23,10 @@
 .bgnewblue{
     background-color: var(--newblue);
 }
+
+.bgnewcolor{
+    background-color: #00212B;
+}
 .underline_{
     border-bottom: 2px solid white;
     font-weight: bold;
@@ -51,4 +55,8 @@ newblack rgb(44, 44, 44) */
 }
 .textnewblack{
     color:var(--newblack)
+}
+
+.tint{
+    background-color: rgba(0,0,0,0.4);
 }

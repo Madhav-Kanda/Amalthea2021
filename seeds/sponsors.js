@@ -56,12 +56,12 @@ module.exports =
                 website: "https://www.beamable.com/"
             },
             {
-                image_link: "/images/logo/ITC.png",
+                image_link: "/images/logo/ITC_new.png",
                 alt: " ITC logo",
                 website: "https://www.itcportal.com/"
             },
             {
-                image_link: "/images/logo/AIL.png",
+                image_link: "/images/logo/AIL_new.png",
                 alt: "aarti-industries logo",
                 website: "https://www.aarti-industries.com/"
             },
