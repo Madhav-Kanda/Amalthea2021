@@ -7,7 +7,8 @@ const ejsMate = require('ejs-mate');
 const contact = require("./seeds/contact");
 const webinar = require("./seeds/webinars");
 const sponsors = require("./seeds/sponsors");
-const events = require("./seeds/evntdata")
+const events = require("./seeds/evntdata");
+const instacode = require("./seeds/instacodes");
 
 const app = express();
 const PORT = process.env.PORT || 80;
@@ -29,7 +30,7 @@ app.engine('ejs', ejsMate)
 
 // Home Page
 app.get('/', (req, res) => {
-	res.status(200).render("home", { events: events, webinar: webinar });
+	res.status(200).render("home", { events: events, webinar: webinar, instacode: instacode});
 });
 
 //Events Page

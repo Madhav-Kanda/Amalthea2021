@@ -25,7 +25,8 @@ module.exports.coordi = [
 
 ]
 
-module.exports.webdev = [
+module.exports.web = [
+	{name: "Madhav Kanda", contact: "+91 97268 83487", email:"madhav.kanda@iitgn.ac.in", image:"../images/team/"},
 	{name: "Kanishk Singhal", contact: "+91 99907 53425", email:"kanishk.singhal@iitgn.ac.in", image:"../images/team/"},
-	{name: "Madhav Kanda", contact: "+91 97268 83487", email:"madhav.kanda@iitgn.ac.in", image:"../images/team/"}
+	{name: "Prakriti", contact: "+91 91404 04228", email:"prakriti.saroj@iitgn.ac.in", image:"../images/team/"}
 ]

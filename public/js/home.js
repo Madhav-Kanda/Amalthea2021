@@ -50,49 +50,49 @@ counters.forEach(counter => {
 	updateCount();
 });
 
-// For Event and Webinar Slider --Start
-const sliders = document.querySelectorAll(".carousel");
-sliders.forEach(slider => {
+// // For Event and Webinar Slider --Start
+// const sliders = document.querySelectorAll(".carousel");
+// sliders.forEach(slider => {
 
-	const card = slider.querySelector(".carousel-list");
-	const listelem = slider.querySelector(".carousel-list > li");
-	const btnleft = slider.querySelector(".fa-angle-left");
-	const btnright = slider.querySelector(".fa-angle-right");
-	const carousel = slider.querySelector(".carousel-disp");
-	let direction;
+// 	const card = slider.querySelector(".carousel-list");
+// 	const listelem = slider.querySelector(".carousel-list > li");
+// 	const btnleft = slider.querySelector(".fa-angle-left");
+// 	const btnright = slider.querySelector(".fa-angle-right");
+// 	const carousel = slider.querySelector(".carousel-disp");
+// 	let direction;
 
-	btnleft.addEventListener("click", () => {
-		if (direction === -1) {
-			card.appendChild(card.firstElementChild);
-			direction = 1;
-		}
-		card.style.transform = `translateX(${listelem.offsetWidth}px)`;
-		carousel.style.justifyContent = 'flex-end';
-	});
-	btnright.addEventListener("click", () => {
-		carousel.style.justifyContent = 'flex-start';
-		if (direction === -1) {
-			card.style.transform = `translateX(-${listelem.offsetWidth}px)`;
-		}
-		direction = -1;
-	});
+// 	btnleft.addEventListener("click", () => {
+// 		if (direction === -1) {
+// 			card.appendChild(card.firstElementChild);
+// 			direction = 1;
+// 		}
+// 		card.style.transform = `translateX(${listelem.offsetWidth}px)`;
+// 		carousel.style.justifyContent = 'flex-end';
+// 	});
+// 	btnright.addEventListener("click", () => {
+// 		carousel.style.justifyContent = 'flex-start';
+// 		if (direction === -1) {
+// 			card.style.transform = `translateX(-${listelem.offsetWidth}px)`;
+// 		}
+// 		direction = -1;
+// 	});
 
-	card.addEventListener("transitionend", () => {
-		if (direction === -1) {
-			card.appendChild(card.firstElementChild);
-		} else if (direction === 1) {
-			card.prepend(card.lastElementChild);
-		}
-		// console.log("hello");
+// 	card.addEventListener("transitionend", () => {
+// 		if (direction === -1) {
+// 			card.appendChild(card.firstElementChild);
+// 		} else if (direction === 1) {
+// 			card.prepend(card.lastElementChild);
+// 		}
+// 		// console.log("hello");
 
-		card.style.transition = "none";
-		card.style.transform = "translateX(0)";
-		setTimeout(() => {
-			card.style.transition = "all 1s ease";
-		});
+// 		card.style.transition = "none";
+// 		card.style.transform = "translateX(0)";
+// 		setTimeout(() => {
+// 			card.style.transition = "all 1s ease";
+// 		});
 
-	});
-});
-// End
+// 	});
+// });
+// // End
 
 

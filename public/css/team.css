@@ -13,13 +13,13 @@ main{
 }
 
 .contact-card{
-	background-color: #2C2C2C;
+	background-color: #161d2c;
 }
 .contact-card:hover .hover-cont{
-	margin-top: 0px;
+	margin-top: 10px;
 }
 .contact-card:hover{
-	background: #1B998B;
+	background-color: #1E40AF;
 }
 .contact-card:hover .cont-img{
 	transform: scale(0.85);

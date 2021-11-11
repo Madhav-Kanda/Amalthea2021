@@ -49,6 +49,9 @@ body{
 .home-card{
 	background: #274169;
 }
+.insta>div{
+	background: #274169;
+}
 .showcase video
 {
   position: absolute;
@@ -104,7 +107,7 @@ padding-right: 3em;
     flex-direction:column;
     justify-content: flex-end;
     /* bottom: 5px; */
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--newwhite);
     font-family: 'Gemunu Libre', sans-serif;
     text-align: right;
@@ -146,7 +149,7 @@ padding-right: 3em;
     cursor: pointer;
 }
 .faviconsAmalHome i:hover{
-    color:var(--newblue)
+    color: #1E40AF;
 }
 .empty{
     height: 100vh;
