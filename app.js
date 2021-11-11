@@ -10,7 +10,7 @@ const sponsors = require("./seeds/sponsors");
 const events = require("./seeds/evntdata")
 
 const app = express();
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3000;
 
 // STATIC FILES
 app.use('/css', express.static('public/css'));
