@@ -11,7 +11,7 @@ const events = require("./seeds/evntdata");
 const instacode = require("./seeds/instacodes");
 
 const app = express();
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3000;
 
 // STATIC FILES
 app.use('/css', express.static('public/css'));
@@ -88,6 +88,10 @@ app.get('/CAportal', (req, res) => {
 //CA register
 app.get('/CAregister', (req, res) => {
 	res.status(200).render("CAform");
+});
+//Webinars
+app.get('/webinars', (req, res) => {
+	res.status(200).render("Webinar",{webinars1:webinar[0]});
 });
 
 // //Live Events
