@@ -4,7 +4,7 @@
 <!-- Add the slick-theme.css if you want default styling -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 <!-- Landing Page -->
-<section class="showcase">
+<section class="showcase" id="home">
 	<video src="/video/LandingPage.mp4" muted loop autoplay></video>
 	<div class="landingpageHome">
 		<div class="contentHome">
@@ -297,4 +297,10 @@
 		autoplaySpeed: 3000,
 	});
 		
+</script>
+<script type="text/javascript">
+	const navlink = document.querySelectorAll(".navbar>ul>li");
+	// console.log(navlink);
+	navlink[0].style.color = "white"
+	navlink[0].style.borderBottom = "2px solid white";
 </script>
