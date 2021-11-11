@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Sora:wght@600;700&display=swap');
+
+.Webinarbg{
+    background-image: url("/images/Webinars_LandingPage.png");
+    background-size: cover;
+    height: 100vh;
+}
+
+:root{
+	--newwhite:#E1E5E4;
+	--newblue:#1B9A8B;
+	--newblack:#2C2C2C;
+}
+
+.hr{
+    color: var(--newwhite);
+    width: 1rem;
+}
+
+.bgnewblack{
+    background-color: var(--newblack);
+}
+.bgnewblue{
+    background-color: var(--newblue);
+}
+.underline_{
+    border-bottom: 2px solid white;
+    font-weight: bold;
+    font-family: 'Sora', sans-serif;
+}
+button{
+    font-family: 'Inter', sans-serif;
+}
+
+.sora{
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+}
+.inter{
+    font-family: 'Inter', sans-serif;
+}
+/* Colors RGB */
+/* newwhite rgb(225,229,228)
+newblue rgb(27,154,139)
+newblack rgb(44, 44, 44) */
+.textnewwhite{
+    color: var(--newwhite);
+}
+.textnewblue{
+    color:var(--newblue)
+}
+.textnewblack{
+    color:var(--newblack)
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100&family=Sora:wght@100&display=swap');
+
+.nav-links{
+	font-family: 'Poppins', cursive;
+}
+.nav-links li{
+	font-size: 2rem;
+}
+.nav-links li:hover{
+	transform: scale(1.1);
+}
+.full-nav{
+	transform: translateX(100%);
+	transition: all 500ms ease;
+	z-index: 100;
+}

@@ -1,0 +1,161 @@
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100&family=Sora:wght@100&display=swap');
+	body {
+		overflow-x: hidden;
+		background: #152642;
+	}
+	label{
+		color: white;
+	}
+	#back1{
+		position: absolute;
+		top: 1vh;
+		right: 0;
+		z-index: -1;
+	}
+</style>
+
+<header class="bg-blue-600 w-full"></header>
+
+<section class="registration pb-36">
+	<div class="head flex flex-col lg:flex-row mx-auto my-16 w-max text-white">
+		<div class="flex flex-col">
+			<div><img src="../images/Amalthea-White-removebg-preview.png" alt="" class="h-36 lg:h-36 flex m-auto"></div>
+			<div class="text-lg lg:text-xl flex m-auto">Amalthea'21</div>
+		</div>
+		<div class="text-3xl flex justify-center items-center px-8 my-8 lg:my-0"><%- event %> Registration</div>
+	</div>
+	<form class="flex flex-col my-2 mx-auto w-2/3 lg:w-2/5 space-y-4" name="google_sheet">
+		<div class="" id="Teamname">
+			<label for="inputteam" class="block">Team Name*</label>
+			<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="inputteam" name="TeamName" required>
+		</div>
+
+		<div class="flex flex-col lg:flex-row">
+			<div class="w-full lg:w-1/2">
+				<label for="inputEmail4" class="block">Email*</label>
+				<input type="email" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputEmail4" placeholder="abc@xyz.com" name="email" required>
+			</div>
+			<div class="w-full lg:w-1/2">
+				<label for="inputname" class="block">Team Leader Name*</label>
+				<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname" name="LeadName" required>
+			</div>
+		</div>
+		
+		<div class="">
+			<label for="inputContact" class="block">Contact*</label>
+			<input type="tel" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputContact" placeholder="99XXXXXXXX" name="contact" required>
+		</div>
+		
+		
+		<% if (event=="Rostruct") { %>
+			<div class="text-white">For 2nd Participant:-</div>
+			<div class="flex flex-col lg:flex-row">
+				<div class="w-full lg:w-1/2">
+					<label for="inputEmail4" class="block">Email*</label>
+					<input type="email" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputEmail4" placeholder="abc@xyz.com" name="email" required>
+				</div>
+				<div class="w-full lg:w-1/2">
+					<label for="inputname" class="block">Name*</label>
+					<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname" name="LeadName" required>
+				</div>
+			</div>
+			
+			<div class="">
+				<label for="inputContact" class="block">Contact Number*</label>
+				<input type="tel" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputContact" placeholder="99XXXXXXXX(Preferably Whatsapp)" name="contact" required>
+			</div>
+			<br><br>
+		<% } %>
+
+		<% if (event=="TechShorts") { %>
+			<div class="w-full">
+				<label for="inputname" class="block">2nd Participant Name*</label>
+				<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname" name="LeadName" required>
+			</div>
+			<div class="w-full">
+				<label for="inputname" class="block">3rd Participant Name*</label>
+				<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname" name="LeadName" required>
+			</div>
+		<% } %>
+		
+		
+
+		<div class="" id="address">
+			<label for="inputInsti" class="block">Institute Name*</label>
+			<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="inputInsti" placeholder="IIT Gandhinagar" name="Institute" required>
+		</div>
+		
+		<div class="flex flex-col lg:flex-row">
+			<div class="w-full lg:w-2/5">
+				<label for="inputevent" class="block">Event*</label>
+				<select id="inputevent" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" name="event" disabled>
+					<option value=<%- event %> selected required><%- event %></option>
+				</select>
+			</div>
+			<div class="w-full lg:w-3/5">
+				<label for="inputContact" class="block">Referral CA code</label>
+				<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="refcode" name="refcode" value=<%- ca %>>
+			</div>				
+		</div>
+		<br>
+		<div class="w-full flex">
+			<button type="submit" class="mx-auto rounded p-2 text-white bg-gray-700 hover:bg-gray-600 scale-110 transform" id="check">Register</button>
+		</div>
+	</form>
+
+
+	<div class="popup justify-center items-center fixed top-0 h-screen w-full bg-gray-700 bg-opacity-60 shadow-2xl hidden overflow-x-hidden">
+		<div class="pop-cont rounded-3xl p-8 relative w-1/2" style="background-color: #121824;">
+			<div class="pop-title text-xl w-full text-center font-semibold font-serif text-white"></div>
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-lg absolute right-0 top-0 h-6 w-6 m-4 cursor-pointer" viewBox="0 0 16 16">
+				<path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+			</svg>
+		</div>
+	</div>
+</section>
+
+<div id="back1"><img src="../images/Untitled2.png" alt=""></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	var str = document.querySelectorAll(".head>div")[1].innerHTML;
+	var event = str.substr(0,str.indexOf(' '));
+	const scriptURL = {
+		'Sciway': 'https://script.google.com/macros/s/AKfycbzwjCFBweN6LFEbm4Q9IhkBFZFBov_LRBuERj0VFEBzdgO-oqSl4BI6ws2CF6Xdoizs/exec',
+		'Icon': 'https://script.google.com/macros/s/AKfycbwBZcOV7InwqGHmWdRSJhnKQC_PKMBP8VvjRn7hnklO1BCBhBRFHw2oKwDVXVpeUggm/exec',
+	};
+	const form = document.forms['google_sheet'];
+	const popup = document.querySelector(".popup");
+	const poptitle = document.querySelector(".pop-title");
+
+	if(scriptURL[event]){
+		form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL[event], { method: 'POST', body: new FormData(form)})
+			.then(response => {
+				form.reset();
+				poptitle.innerHTML = "Form has been submitted";
+				popup.style.display = "flex";
+			})
+			.catch(error => {
+				console.error('Error!', error.message);
+				poptitle.innerHTML = "There has been a error, Please try again.";
+				popup.style.display = "flex";
+			})
+		})
+
+		
+	}else if(scriptURL[event]){
+		poptitle.innerHTML = "There is no such event, Check your link is Correct";
+		popup.style.display = "flex";
+	}
+	document.querySelector(".bi-x-lg").addEventListener("click",(evnt)=>{
+		if(popup.contains(evnt.target)){
+			popup.style.display = "none";
+			console.log("closed");
+		}
+	});
+</script>
+<script>
+	
+</script>
