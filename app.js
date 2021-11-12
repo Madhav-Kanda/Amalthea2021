@@ -91,7 +91,7 @@ app.get('/CAregister', (req, res) => {
 });
 //Webinars
 app.get('/webinars', (req, res) => {
-	res.status(200).render("Webinar",{webinars1:webinar[0]});
+	res.status(200).render("Webinar",{webinars1:webinar[0], webinars0:webinar[1]});
 });
 
 // //Live Events

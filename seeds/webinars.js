@@ -28,24 +28,9 @@ module.exports = [
     ],
     [
         {
-            Name: "Quantum Engineering",
-            image: "/images/Webinars/",
-            link: "."
+            Name: "Nilesh Shah",
+            image: "/images/Webinars/NileshSir.png",
+            registers: "https://forms.gle/QSvWFCiNmkMB95957"
         },
-        {
-            Name: "Visual Effects",
-            image: "/images/Webinars/",
-            link: ""
-        },
-        {
-            Name: "Arvind Panagree",
-            image: "/images/Webinars/",
-            link: ""
-        },
-        {
-            Name: "Space to Earth",
-            image: "/images/Webinars/",
-            link: ""
-        }
     ]
 ]
