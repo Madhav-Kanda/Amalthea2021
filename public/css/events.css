@@ -2,10 +2,13 @@ body{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background: #0f0f63;
+	background: #152642;
 	/* background-image: url("/images/circle-blues.png");
 	background-repeat: repeat;
 	background-size: 250px 250px; */
+}
+.bigcard{
+	background: #274169;
 }
 .hero{
 	height: 100vh;
