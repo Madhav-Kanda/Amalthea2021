@@ -46,58 +46,60 @@ body{
 	width: 37rem;
 }
 
-.pop-cont::-webkit-scrollbar{
-	width: 12px;
+.pop-cont::-webkit-scrollbar {
+  width: 12px;
 }
-.pop-cont::-webkit-scrollbar-thumb{
-	background: rgb(80, 99, 129);
-	border-radius: 6px;
+.pop-cont::-webkit-scrollbar-thumb {
+  background: rgb(80, 99, 129);
+  border-radius: 6px;
 }
 .pop-cont::-webkit-scrollbar-track-piece:end {
-	background: transparent;
-	margin-bottom: 10px; 
+  background: transparent;
+  margin-bottom: 10px;
 }
 .pop-cont::-webkit-scrollbar-track-piece:start {
-	background: transparent;
-	margin-top: 10px;
+  background: transparent;
+  margin-top: 10px;
 }
-.pop-cont{
-	width: 90%;
-	height: 90%;
+.pop-cont {
+  width: 90%;
+  height: 90%;
 }
-.info>div{
-	background: linear-gradient(135deg, rgba(255,255,255,0.56),rgba(255,255,255,0.26));
-	position: relative;
-	backdrop-filter: blur(10px);
-	z-index: 10;
+.info > div {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.56),
+    rgba(255, 255, 255, 0.26)
+  );
+  position: relative;
+  backdrop-filter: blur(10px);
+  z-index: 10;
 }
-#blob1{
-	position: absolute;
-	top: 57%;
-	left: 32%;
-	width: 60%;
+#blob1 {
+  position: absolute;
+  top: 57%;
+  left: 32%;
+  width: 60%;
 }
-#blob2{
-	position: absolute;
-	top: -13%;
-	left: -10%;
-	width: 73%;
+#blob2 {
+  position: absolute;
+  top: -13%;
+  left: -10%;
+  width: 73%;
 }
-.title{
-	color: white;
-} 
-.content{
-	color: rgb(219, 219, 219);
+.title {
+  color: white;
 }
-
-.card-cont{
-	padding-top: 30rem;
-	background: linear-gradient(to bottom,
-	rgba(0,0,0,0),
-	rgba(0,0,0,1));
+.content {
+  color: rgb(219, 219, 219);
 }
 
-.lvcard:hover .card-cont{
-	transform: translateY(-100%);
-	transition: all 300ms ease;
+.card-cont {
+  padding-top: 30rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.lvcard:hover .card-cont {
+  transform: translateY(-100%);
+  transition: all 300ms ease;
 }
