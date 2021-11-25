@@ -103,3 +103,9 @@ body{
   transform: translateY(-100%);
   transition: all 300ms ease;
 }
+
+.lvcard img {
+    width: 100%;
+	height: 100%;
+	object-fit: fill;
+}

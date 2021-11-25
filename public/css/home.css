@@ -131,11 +131,10 @@ body {
   padding-right: 0.15em;
   justify-content: space-between;
 }
-
+*/
 .faviconsAmalHome i {
-  color: var(--newwhite);
-  padding-left: 2px;
-} */
+  color: white;
+}
 .faviconsAmalHome a {
   cursor: pointer;
 }

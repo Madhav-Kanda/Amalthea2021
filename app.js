@@ -17,6 +17,7 @@ const PORT = process.env.PORT || 80;
 app.use('/css', express.static('public/css'));
 app.use('/images', express.static('public/images'));
 app.use('/js', express.static('public/js'));
+app.use('/video', express.static('public/video'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded())
@@ -57,9 +58,9 @@ app.get('/eventRegistration', (req, res) => {
 // });
 
 // Sponsors Page
-app.get('/sponsors', (req, res) => {
-	res.status(200).render("sponsors", { sponsors1: sponsors[0], sponsors2: sponsors[1] });
-});
+// app.get('/sponsors', (req, res) => {
+// 	res.status(200).render("sponsors", { sponsors1: sponsors[0], sponsors2: sponsors[1] });
+// });
 
 // // Symposium Page
 // app.get('/symposium', (req, res) => {
@@ -78,9 +79,9 @@ app.get('/contact', (req, res) => {
 
 
 //StayTuned
-app.get('/staytuned', (req, res) => {
-	res.status(200).render("StayTuned");
-});
+// app.get('/staytuned', (req, res) => {
+// 	res.status(200).render("StayTuned");
+// });
 //CA page
 app.get('/CAportal', (req, res) => {
 	res.status(200).render("CAhome");
