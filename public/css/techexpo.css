@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url("/images/techexpo_background.png");
+  background-size: cover;
+}
+
+.letterspacing1 {
+  letter-spacing: 13px;
+}
+.letterspacing2 {
+  letter-spacing: 10px;
+}
+
+button {
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 0.5px solid white;
+  /* fill: var(--newblack); */
+  transition: 0.2s ease-in;
+  background-color: rgba(44, 44, 44, 0.4);
+  color: #76ffff;
+}
+
+button:hover {
+  background-color: rgba(27, 154, 139, 0.75);
+  color: var(--newwhite);
+}
+
+@media screen and (max-width: 322px) {
+  .letterspacing1 {
+    letter-spacing: 5px;
+  }
+  .letterspacing2 {
+    letter-spacing: 3px;
+  }
+  .smscreen {
+    font-size: 55px;
+  }
+}

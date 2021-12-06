@@ -52,10 +52,10 @@ app.get('/eventRegistration', (req, res) => {
 // 	res.status(200).render("StayTuned");
 // });
 
-// // Tech Expo Page
-// app.get('/techexpo', (req, res) => {
-// 	res.status(200).render("StayTuned");
-// });
+// Tech Expo Page
+app.get('/techexpo', (req, res) => {
+	res.status(200).render("techexpo");
+});
 
 // Sponsors Page
 // app.get('/sponsors', (req, res) => {
