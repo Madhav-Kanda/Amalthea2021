@@ -4,7 +4,7 @@ const cancel = document.querySelector(".cancel");
 // console.log(toggle, fullnav);
 
 toggle.addEventListener("click",()=>{
-	fullnav.style.transform = "translateX(0%)";
+	fullnav.style.transform = "translateX(-7%)";
 });
 
 cancel.addEventListener("click",()=>{

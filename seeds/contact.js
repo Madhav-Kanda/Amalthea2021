@@ -5,7 +5,7 @@ module.exports.core = [
 
 	{name:"Kushagra Jain", contact:"+91 93103 21368", email:"kushagra.jain@iitgn.ac.in", image:"../images/team/"},
 
-	{name:"Shreya Shukla", contact:"+91 80054 99671", email:"shreya.shukla@iitgn.ac.in", image:"../images/team/"},
+	{name:"Shreya Shukla", contact:"+91 80054 99671", email:"shreya.shukla@iitgn.ac.in", image:"../images/team/"}
 ]
 
 module.exports.coordi = [

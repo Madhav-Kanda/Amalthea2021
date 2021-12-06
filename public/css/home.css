@@ -131,11 +131,10 @@ body {
   padding-right: 0.15em;
   justify-content: space-between;
 }
-
+*/
 .faviconsAmalHome i {
-  color: var(--newwhite);
-  padding-left: 2px;
-} */
+  color: white;
+}
 .faviconsAmalHome a {
   cursor: pointer;
 }
@@ -324,4 +323,12 @@ body {
 }
 .fa-angle-right {
   transform: scale(3);
+}
+.webinar{
+	height: 44rem;
+}
+@media screen and (min-height:560px) and (max-width:500px){
+	.webinar{
+		height: 30rem;
+	}
 }

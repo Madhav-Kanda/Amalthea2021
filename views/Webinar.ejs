@@ -15,28 +15,28 @@
 </section>
 <hr> -->
 <section class="Webinarbg">
-    <div class="relative h-full w-full flex flex-col pl-8 lg:top-28 lg:items-start justify-start items-center top-1/3">
-        <div class="sm:text-8xl text-white text-6xl">Webinars</div>
-        <div class="sub-title text-xl text-gray-500 sm:text-4xl pt-1  ">@AMALTHEA 21</div>
+    <div class="relative w-full flex flex-col pl-8 lg:top-28 lg:items-start justify-start items-center top-1/3">
+        <div class="sm:text-8xl text-white text-5xl">Webinars</div>
+        <div class="sub-title text-xl text-gray-500 sm:text-3xl pt-1">@AMALTHEA 21</div>
     </div>
 </section>
 
 
 <section class="px-1 lg:px-10 py-4 flex justify-center">
-<div class="w-5/6 lg:w-5/6 p-8 m-16 text-white border-blue-900 border-2 rounded-lg home-card text-xl">
+<div class="w-5/6 lg:w-5/6 p-4 lg:p-8 m-1 lg:m-16 text-white border-blue-900 border-2 rounded-lg home-card text-xl">
     A pandemic - era innovation, the first Webinar Series of Amalthea was organised by Amalthea Conclave in 2020 with great success. This year, we look to continue our legacy, to host acclaimed speakers, visionaries, and pioneers from various walks of life to spread knowledge and provide an insight into the problems along with their ingenious solutions. Over the years, it has been one of the most popular events at Amalthea.
 </div>
 </section>
 
 <section id="UpcomingWebinars" class="text-white blue-900 py-16">
-    <div class="lg:w-1/2 w-full lg:mb-0 mx-6 py-2">
-        <h1 class="sm:text-4xl text-3xl font-medium title-font text-white mx-16 py-16">
-            <span class="underline_ ">
+    <div class="w-full lg:mb-0 lg:mx-auto py-8 sm:text-4xl text-3xl font-medium title-font text-white lg:py-16 text-center">
+        <!-- <h1 class=""> -->
+            <!-- <span class="underline_ "> -->
             UPCOMING WEBINARS
-            </span>
-        </h1>
+            <!-- </span> -->
+        <!-- </h1> -->
     </div>
-    <div class="flex mx-16 flex-wrap md:mx-24 justify-start">
+    <div class="flex mx-8 flex-wrap md:mx-24 justify-start">
         <% webinars0.forEach(webinar=> { %>
             <div class="xl:w-1/4 md:w-1/3 p-4 mx-1 glassmorph my-6 rounded-md">
                 <img src="<%= webinar.image %>" alt="">
@@ -49,14 +49,14 @@
 </section>
 
 <section id="UpcomingWebinars" class="text-white blue-900">
-    <div class="lg:w-1/2 w-full lg:mb-0 mx-6 py-2">
-        <h1 class="sm:text-4xl text-3xl font-medium title-font text-white mx-16 py-16">
-            <span class="underline_ ">
+    <div class="w-full lg:mb-0 lg:mx-auto py-8 sm:text-4xl text-3xl font-medium title-font text-white lg:py-16 text-center">
+        <!-- <h1 class=""> -->
+            <!-- <span class="underline_ "> -->
             PREVIOUS WEBINARS
-            </span>
-        </h1>
+            <!-- </span> -->
+        <!-- </h1> -->
     </div>
-    <div class="flex mx-16 flex-wrap md:mx-2 justify-evenly">
+    <div class="flex mx-8 flex-wrap md:mx-2 justify-evenly">
         <% webinars1.forEach(webinar=> { %>
             <div class="xl:w-1/4 md:w-1/3 p-4 mx-1 glassmorph my-6 rounded-md">
                 <img src="<%= webinar.image %>" alt="">
@@ -69,8 +69,15 @@
 </section>
 
 <script type="text/javascript">
+	const navlink = document.querySelectorAll(".full-nav>ul>li");
+	// console.log(navlink);
+	navlink[1].style.color = "white";
+	navlink[1].style.fontWeight = "bold";
+</script>
+
+<!-- <script type="text/javascript">
 	const navlink = document.querySelectorAll(".navbar>ul>li");
 	// console.log(navlink);
 	navlink[2].style.color = "white";
 	navlink[2].style.borderBottom = "2px solid white";
-</script>
+</script> -->

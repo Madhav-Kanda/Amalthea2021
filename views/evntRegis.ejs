@@ -26,66 +26,111 @@
 		<div class="text-3xl flex justify-center items-center px-8 my-8 lg:my-0"><%- event %> Registration</div>
 	</div>
 	<form class="flex flex-col my-2 mx-auto w-2/3 lg:w-2/5 space-y-4" name="google_sheet">
-		<div class="" id="Teamname">
-			<label for="inputteam" class="block">Team Name*</label>
-			<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="inputteam" name="TeamName" required>
-		</div>
+		<% if (event!="Effectify" && event!="Cryptorush" && event!="Electronica") { %>
+			<div class="" id="Teamname">
+				<label for="inputteam" class="block">Team Name*</label>
+				<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="inputteam" name="TeamName" required>
+			</div>
+		<% } %>
 
 		<div class="flex flex-col lg:flex-row">
 			<div class="w-full lg:w-1/2">
-				<label for="inputEmail4" class="block">Email*</label>
-				<input type="email" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputEmail4" placeholder="abc@xyz.com" name="email" required>
+				<label for="inputEmail1" class="block">Email*</label>
+				<input type="email" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputEmail1" placeholder="abc@xyz.com" name="Email" required>
 			</div>
-			<div class="w-full lg:w-1/2">
-				<label for="inputname" class="block">Team Leader Name*</label>
-				<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname" name="LeadName" required>
-			</div>
-		</div>
-		
-		<div class="">
-			<label for="inputContact" class="block">Contact*</label>
-			<input type="tel" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputContact" placeholder="99XXXXXXXX" name="contact" required>
-		</div>
-		
-		
-		<% if (event=="Rostruct") { %>
-			<div class="text-white">For 2nd Participant:-</div>
-			<div class="flex flex-col lg:flex-row">
-				<div class="w-full lg:w-1/2">
-					<label for="inputEmail4" class="block">Email*</label>
-					<input type="email" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputEmail4" placeholder="abc@xyz.com" name="email" required>
-				</div>
+			<% if (event=="Effectify" || event=="Cryptorush") { %>
 				<div class="w-full lg:w-1/2">
 					<label for="inputname" class="block">Name*</label>
+					<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname" name="Name" required>
+				</div>
+			<% } else { %>
+				<div class="w-full lg:w-1/2">
+					<label for="inputname" class="block">Team Leader Name*</label>
 					<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname" name="LeadName" required>
+				</div>
+			<% } %>
+		</div>
+
+		<% if (event=="Electronica") { %>
+			<div class="">
+				<label for="inputyear" class="block">Programme and Year*</label>
+				<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputyear" name="Prog_Year" placeholder="Eg. B.Tech Second Year" required>
+			</div>
+			<div class="" id="address">
+				<label for="inputInsti1" class="block">Institute Name*</label>
+				<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="inputInsti1" placeholder="IIT Gandhinagar" name="Institute1" required>
+			</div>
+		<% } %>
+
+		<div class="">
+			<label for="inputContact" class="block">Contact*</label>
+			<input type="tel" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputContact" placeholder="99XXXXXXXX(Preferably Whatsapp)" name="contact" required>
+		</div>
+		
+		
+		<% if (event=="Electronica") { %>
+			<br>
+			<div class="text-white text-lg">For 2nd Participant:-</div>
+			<div class="flex flex-col lg:flex-row">
+				<div class="w-full lg:w-1/2">
+					<label for="inputEmail2" class="block">Email</label>
+					<input type="email" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputEmail2" placeholder="abc@xyz.com" name="Secondemail">
+				</div>
+				<div class="w-full lg:w-1/2">
+					<label for="inputname2" class="block">Name</label>
+					<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname2" name="SecondName">
 				</div>
 			</div>
 			
 			<div class="">
-				<label for="inputContact" class="block">Contact Number*</label>
-				<input type="tel" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputContact" placeholder="99XXXXXXXX(Preferably Whatsapp)" name="contact" required>
-			</div>
-			<br><br>
-		<% } %>
-
-		<% if (event=="TechShorts") { %>
-			<div class="w-full">
-				<label for="inputname" class="block">2nd Participant Name*</label>
-				<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname" name="LeadName" required>
-			</div>
-			<div class="w-full">
-				<label for="inputname" class="block">3rd Participant Name*</label>
-				<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname" name="LeadName" required>
+				<label for="inputContact2" class="block">Contact</label>
+				<input type="tel" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputContact2" placeholder="99XXXXXXXX(Preferably Whatsapp)" name="Secondcontact">
 			</div>
 		<% } %>
-		
-		
 
-		<div class="" id="address">
-			<label for="inputInsti" class="block">Institute Name*</label>
-			<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="inputInsti" placeholder="IIT Gandhinagar" name="Institute" required>
-		</div>
+		<% if (event=="Techshorts") { %>
+			<div class="w-full">
+				<label for="inputname2" class="block">2nd Participant Name*</label>
+				<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname2" name="SecondName" required>
+			</div>
+			<div class="w-full">
+				<label for="inputname3" class="block">3rd Participant Name*</label>
+				<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname3" name="ThirdName" required>
+			</div>
+		<% } %>
 		
+		<% if (event=="Electronica") { %>
+			<div class="">
+				<label for="inputyear2" class="block">Programme and Year</label>
+				<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputyear2" name="Prog_Year2" placeholder="Eg. B.Tech Second Year">
+			</div>
+			<div class="" id="address">
+				<label for="inputInsti2" class="block">Institute Name</label>
+				<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="inputInsti2" placeholder="IIT Gandhinagar" name="Institute2">
+			</div>
+		<% } else { %>
+			<div class="" id="address">
+				<label for="inputInsti" class="block">Institute Name*</label>
+				<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="inputInsti" placeholder="IIT Gandhinagar" name="Institute" required>
+			</div>
+		<% } %>
+
+		
+		<% if (event=="Effectify") { %>
+			<div class="" id="howques">
+				<label for="inputques" class="block">How did you get to know about this event?*</label>
+				<select id="inputques" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" name="HowDidYouKnowAbtEvent" required>
+					<option value="Website" selected>Amalthea Website</option>
+					<option value="Social Media">Amalthea social media handles</option>
+					<option value="Friends And Colleagues">Friends and Colleagues</option>
+					<option value="By Your Institution">By Your Institution</option>
+					<option value="D2C">D2C</option>
+					<option value="Other">Other</option>
+				</select>
+				<!-- <textarea type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" rows="2" id="inputques" name="HowDidYouKnowAbtEvent" required></textarea> -->
+			</div>
+		<% } %>
+
 		<div class="flex flex-col lg:flex-row">
 			<div class="w-full lg:w-2/5">
 				<label for="inputevent" class="block">Event*</label>
@@ -121,9 +166,14 @@
 	var str = document.querySelectorAll(".head>div")[1].innerHTML;
 	var event = str.substr(0,str.indexOf(' '));
 	const scriptURL = {
-		'Sciway': 'https://script.google.com/macros/s/AKfycbzwjCFBweN6LFEbm4Q9IhkBFZFBov_LRBuERj0VFEBzdgO-oqSl4BI6ws2CF6Xdoizs/exec',
+		// 'Sciway': 'https://script.google.com/macros/s/AKfycbzwjCFBweN6LFEbm4Q9IhkBFZFBov_LRBuERj0VFEBzdgO-oqSl4BI6ws2CF6Xdoizs/exec',
 		// 'Icon': 'https://script.google.com/macros/s/AKfycbwBZcOV7InwqGHmWdRSJhnKQC_PKMBP8VvjRn7hnklO1BCBhBRFHw2oKwDVXVpeUggm/exec',
-		'Icon': 'https://script.google.com/macros/s/AKfycbzp8J2GQro-wh3m5jLM_Hi2AeNvKY0m2QjiSio8oHzTTjRNwTxQgtOjrDlHGK9JfMIO7Q/exec',
+		'Techshorts': 'https://script.google.com/macros/s/AKfycbzp8J2GQro-wh3m5jLM_Hi2AeNvKY0m2QjiSio8oHzTTjRNwTxQgtOjrDlHGK9JfMIO7Q/exec',
+		'Effectify': 'https://script.google.com/macros/s/AKfycbyrBJUi2_k1C4FyTS6C2ADDDhjcNcOM8llCIIzqzmzDx93QSJ468tRjxU_L64ZNZ0g3/exec',
+		'Cryptorush': 'https://script.google.com/macros/s/AKfycbyh1mom9jpjZoc2Vbnue1mKWSf6Z1A1ME2T7bRrF02bZYY02ahOda04pKEO2m2isYnR8w/exec',
+		'Electronica': 'https://script.google.com/macros/s/AKfycbw_qsbYkIPufPTGG8cHQ1gM0sVfse_5X7UTez8dzKSdc5DQ2OXV9LKf_8RJb9DqNin7/exec'
+		// https://script.google.com/macros/s/AKfycbxLg7hrQ8K5oMVU0VsWzK0Si7XMPgjf-X2JKJKRP3Cs8IN_3EEsUaY9Z-qtOS7gNhiURA/exec
+		// 'Electronica': '',
 	};
 	const form = document.forms['google_sheet'];
 	const popup = document.querySelector(".popup");
