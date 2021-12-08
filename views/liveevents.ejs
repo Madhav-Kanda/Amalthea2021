@@ -31,7 +31,11 @@
 									<% } else { %>
 										<div class="register px-4 py-2 rounded-xl bg-gray-400">Register</div>
 									<% } %>
+									<% if (elem.name != "ROStruct") { %>
 									<div class="rulebook px-4 py-2 rounded-xl bg-blue-800"><a href=<%- elem.rulebook %> target="_blank">Rulebook</a></div>
+									<% } else { %>
+										<div class="rulebook px-4 py-2 rounded-xl bg-gray-400">Rulebook</div>
+									<% } %>
 								</div>
 							</div>
 						</div>
@@ -76,7 +80,11 @@
 							<div class="card-cont flex flex-col items-center w-full pb-8 rounded-b-xl">
 								<div class="card-name text-2xl font-medium"><%- elem.name %></div>
 								<div class="btns flex justify-around w-full mt-4">
-									<div class="rulebook px-4 py-2 rounded-xl bg-blue-800"><a href=<%- elem.rulebook %> target="_blank">Rulebook</a></div>
+									<% if (elem.name != "ROStruct") { %>
+										<div class="rulebook px-4 py-2 rounded-xl bg-blue-800"><a href=<%- elem.rulebook %> target="_blank">Rulebook</a></div>
+									<% } else { %>
+										<div class="rulebook px-4 py-2 rounded-xl bg-gray-400">Rulebook</div>
+									<% } %>
 								</div>
 							</div>
 						</div>

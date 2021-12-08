@@ -1,6 +1,11 @@
 module.exports = [
     [
         {
+            Name: "Nilesh Shah",
+            image: "/images/Webinars/NileshSir.png",
+            registers: "https://forms.gle/QSvWFCiNmkMB95957"
+        },
+		{
             Name: "Dr. Mylswamy Annadurai",
             image: "/images/Webinars/AnnaduraiSir.jpg",
             link: "https://youtu.be/nElss3iRpB0"
@@ -29,8 +34,8 @@ module.exports = [
     [
         {
             Name: "Nilesh Shah",
-            image: "/images/Webinars/NileshSir.png",
-            registers: "https://forms.gle/QSvWFCiNmkMB95957"
+            image: "/images/Webinars/RajSir.png",
+            registers: "https://docs.google.com/forms/d/e/1FAIpQLSftvzwJjiETgYfUGgQ03FqBYRZLIROMUxN9FLGncOMCy4llpw/viewform"
         },
     ]
 ]

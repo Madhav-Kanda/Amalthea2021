@@ -26,7 +26,7 @@
 		<div class="text-3xl flex justify-center items-center px-8 my-8 lg:my-0"><%- event %> Registration</div>
 	</div>
 	<form class="flex flex-col my-2 mx-auto w-2/3 lg:w-2/5 space-y-4" name="google_sheet">
-		<% if (event!="Effectify" && event!="Cryptorush" && event!="Electronica") { %>
+		<% if (event!="Effectify" && event!="Cryptorush" && event!="Electronica" && event!="Graphiti") { %>
 			<div class="" id="Teamname">
 				<label for="inputteam" class="block">Team Name*</label>
 				<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="inputteam" name="TeamName" required>
@@ -38,7 +38,7 @@
 				<label for="inputEmail1" class="block">Email*</label>
 				<input type="email" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputEmail1" placeholder="abc@xyz.com" name="Email" required>
 			</div>
-			<% if (event=="Effectify" || event=="Cryptorush") { %>
+			<% if (event=="Effectify" || event=="Cryptorush" || event=="Graphiti") { %>
 				<div class="w-full lg:w-1/2">
 					<label for="inputname" class="block">Name*</label>
 					<input type="text" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" id="inputname" name="Name" required>
@@ -116,7 +116,7 @@
 		<% } %>
 
 		
-		<% if (event=="Effectify") { %>
+		<% if (event=="Effectify" || event=="Graphiti") { %>
 			<div class="" id="howques">
 				<label for="inputques" class="block">How did you get to know about this event?*</label>
 				<select id="inputques" class="p-2 rounded border-2 border-gray-700 focus:border-gray-600 w-full" name="HowDidYouKnowAbtEvent" required>
@@ -139,8 +139,8 @@
 				</select>
 			</div>
 			<div class="w-full lg:w-3/5">
-				<label for="inputContact" class="block">Referral CA code</label>
-				<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" id="refcode" name="refcode" value=<%- ca %>>
+				<label for="inputContact" class="block">Referral CA code(If Applicable)</label>
+				<input type="text" class="p-2 w-full rounded border-2 border-gray-700 focus:border-gray-600" placeholder="" id="refcode" name="refcode" value=<%- ca %>>
 			</div>				
 		</div>
 		<br>
@@ -171,7 +171,8 @@
 		'Techshorts': 'https://script.google.com/macros/s/AKfycbzp8J2GQro-wh3m5jLM_Hi2AeNvKY0m2QjiSio8oHzTTjRNwTxQgtOjrDlHGK9JfMIO7Q/exec',
 		'Effectify': 'https://script.google.com/macros/s/AKfycbyrBJUi2_k1C4FyTS6C2ADDDhjcNcOM8llCIIzqzmzDx93QSJ468tRjxU_L64ZNZ0g3/exec',
 		'Cryptorush': 'https://script.google.com/macros/s/AKfycbyh1mom9jpjZoc2Vbnue1mKWSf6Z1A1ME2T7bRrF02bZYY02ahOda04pKEO2m2isYnR8w/exec',
-		'Electronica': 'https://script.google.com/macros/s/AKfycbw_qsbYkIPufPTGG8cHQ1gM0sVfse_5X7UTez8dzKSdc5DQ2OXV9LKf_8RJb9DqNin7/exec'
+		'Electronica': 'https://script.google.com/macros/s/AKfycbw_qsbYkIPufPTGG8cHQ1gM0sVfse_5X7UTez8dzKSdc5DQ2OXV9LKf_8RJb9DqNin7/exec',
+		'Graphiti': 'https://script.google.com/macros/s/AKfycbz1-Q8dWXYQyK96MvnQCcWUA3UPh1w3Mxsx_TXyUJFo0xBsWYINMJDxM7OYJmmOuSex/exec',
 		// https://script.google.com/macros/s/AKfycbxLg7hrQ8K5oMVU0VsWzK0Si7XMPgjf-X2JKJKRP3Cs8IN_3EEsUaY9Z-qtOS7gNhiURA/exec
 		// 'Electronica': '',
 	};
