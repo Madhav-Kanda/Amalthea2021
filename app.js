@@ -52,15 +52,15 @@ app.get('/eventRegistration', (req, res) => {
 // 	res.status(200).render("StayTuned");
 // });
 
-// // Tech Expo Page
-// app.get('/techexpo', (req, res) => {
-// 	res.status(200).render("StayTuned");
-// });
+// Tech Expo Page
+app.get('/techexpo', (req, res) => {
+	res.status(200).render("techexpo");
+});
 
-// Sponsors Page
-// app.get('/sponsors', (req, res) => {
-// 	res.status(200).render("sponsors", { sponsors1: sponsors[0], sponsors2: sponsors[1] });
-// });
+//Sponsors Page
+app.get('/sponsors', (req, res) => {
+	res.status(200).render("sponsors", { sponsors1: sponsors[0], sponsors2: sponsors[1] , sponsors3: sponsors[2], sponsors4: sponsors[3], sponsors5: sponsors[4]});
+});
 
 // // Symposium Page
 // app.get('/symposium', (req, res) => {

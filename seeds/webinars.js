@@ -5,6 +5,11 @@ module.exports = [
             image: "/images/Webinars/NileshSir.png",
             registers: "https://forms.gle/QSvWFCiNmkMB95957"
         },
+        {
+            Name: "Raj Chowdhary",
+            image: "/images/Webinars/RajSir.png",
+            link: "https://www.youtube.com/watch?v=yYxDtFMv6FY"
+        },
 		{
             Name: "Dr. Mylswamy Annadurai",
             image: "/images/Webinars/AnnaduraiSir.jpg",
@@ -29,13 +34,40 @@ module.exports = [
             Name: "Dr. William D. Oliver",
             image: "/images/Webinars/OliverSir.jpg",
             link: "https://youtu.be/GldMhHmNsSM"
-        }
+        },
+  
+
     ],
     [
         {
-            Name: "Nilesh Shah",
-            image: "/images/Webinars/RajSir.png",
-            registers: "https://docs.google.com/forms/d/e/1FAIpQLSftvzwJjiETgYfUGgQ03FqBYRZLIROMUxN9FLGncOMCy4llpw/viewform"
+            Name: "J.D. PATIL",
+            image: "/images/Webinars/PatilSir.png",
+            registers: "https://www.airmeet.com/e/d40500a0-569b-11ec-a49d-3581b7229050"
+        },
+        {
+            Name: "Jaynti Kanani",
+            image: "/images/Webinars/KananiSir.png",
+            registers: "https://www.airmeet.com/e/d40500a0-569b-11ec-a49d-3581b7229050"
+        },
+        {
+            Name: "Shiva Shekhar",
+            image: "/images/Webinars/ShivaSir.png",
+            registers: "https://www.airmeet.com/e/d40500a0-569b-11ec-a49d-3581b7229050"
+        },
+        {
+            Name: "Kirk Borne",
+            image: "/images/Webinars/KirkSir.png",
+            registers: "https://www.airmeet.com/e/d40500a0-569b-11ec-a49d-3581b7229050"
+        },
+        {
+            Name: "Mitika Bajpai",
+            image: "/images/Webinars/MitikaMam.png",
+            registers: "https://www.airmeet.com/e/d40500a0-569b-11ec-a49d-3581b7229050"
+        },
+        {
+            Name: "Solar Alliance",
+            image: "/images/Webinars/SolarAlliance.png",
+            registers: "https://www.airmeet.com/e/d40500a0-569b-11ec-a49d-3581b7229050"
         },
     ]
 ]
