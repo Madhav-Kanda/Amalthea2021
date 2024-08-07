@@ -12,9 +12,6 @@ const instacode = require("./seeds/instacodes");
 const port = process.env.PORT || 3000;
 const app = express()
 
-// Use body-parser middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 
 // STATIC FILES
 app.use('/css', express.static('public/css'));
