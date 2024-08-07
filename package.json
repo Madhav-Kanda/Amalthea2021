@@ -4,8 +4,11 @@
   "description": "This is the repository for amalthea 21 website",
   "main": "app.js",
   "scripts": {
-    "develop": "nodemon app.js",
+    "develop": "node app.js",
     "build:css": "tailwind build -i style.css -o public/css/style.css"
+  },
+  "engines":{
+    "node": "19.x"
   },
   "keywords": [],
   "author": "",

@@ -11,7 +11,7 @@ const events = require("./seeds/evntdata");
 const instacode = require("./seeds/instacodes");
 
 const app = express();
-const PORT = process.env.PORT || 80;
+const PORT = 3000 ;
 
 // STATIC FILES
 app.use('/css', express.static('public/css'));
@@ -100,6 +100,6 @@ app.get('/webinars', (req, res) => {
 //     res.render('liveevents', {lvevents: lvevents});
 // })
 
-app.listen((process.env.PORT || PORT), () => {
+app.listen((3000), () => {
 	console.log(`The application started successfully on port ${PORT}`);
 });
