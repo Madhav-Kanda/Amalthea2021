@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "develop": "node app.js",
-    "build:css": "tailwind build -i style.css -o public/css/style.css"
+    "build:css": "tailwind build -i style.css -o public/css/style.css",
+    "vercel-build": "node app.js"
   },
   "engines":{
     "node": "20.x"
