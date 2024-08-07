@@ -9,9 +9,12 @@ const webinar = require("./seeds/webinars");
 const sponsors = require("./seeds/sponsors");
 const events = require("./seeds/evntdata");
 const instacode = require("./seeds/instacodes");
+const port = process.env.PORT || 3000;
+const app = express()
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+// Use body-parser middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // STATIC FILES
 app.use('/css', express.static('public/css'));
@@ -100,6 +103,8 @@ app.get('/webinars', (req, res) => {
 //     res.render('liveevents', {lvevents: lvevents});
 // })
 
-app.listen((PORT), () => {
-	console.log(`The application started successfully on port ${PORT}`);
+app.listen((port), () => {
+	console.log(`The application started successfully on port ${port}`);
 });
+
+module.exports = app;
